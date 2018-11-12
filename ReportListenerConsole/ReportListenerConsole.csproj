@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{51C4BCB5-CECE-4BE7-9EFE-C18B941C6055}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReportListenerConsole</RootNamespace>
+    <AssemblyName>ReportListenerConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSharpAPI">
+      <HintPath>S:\Lib\CSharpAPI.dll\9.73.06.0\9.73.06.0\CSharpAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Gargoyle.Common">
+      <HintPath>S:\Lib\Gargoyle.Common.dll\1.0.0.0\1.0.0.0\Gargoyle.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Gargoyle.Utilities.CommandLine">
+      <HintPath>S:\Lib\Gargoyle.Utilities.CommandLine.dll\1.0.2.0\1.0.2.0\Gargoyle.Utilities.CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Gargoyle.Utils.DBAccess">
+      <HintPath>S:\Lib\Gargoyle.Utils.DBAccess.dll\2.0.0.0\1.0.0.7\Gargoyle.Utils.DBAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="GargoyleTaskLib, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\Lib\GargoyleTaskLib.dll\1.0.1.1\1.0.1.1\GargoyleTaskLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\Lib\log4net.dll\1.2.10.0\1.2.10.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="LoggingUtilitiesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=af9ec4594d0014e9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\Lib\LoggingUtilitiesLib.dll\1.0.0.3\1.0.0.3\LoggingUtilitiesLib.dll</HintPath>
+    </Reference>
+    <Reference Include="RealTick.Api">
+      <HintPath>S:\Lib\RealTick.Api.dll\4.0.78.0\4.0.78.0\RealTick.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="RealTick.Api.Domain">
+      <HintPath>S:\Lib\RealTick.Api.Domain.dll\4.0.78.0\4.0.78.0\RealTick.Api.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="RealTickLib, Version=1.0.0.7, Culture=neutral, PublicKeyToken=af9ec4594d0014e9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\Lib\RealTickLib.dll\1.0.0.8\1.0.0.8\RealTickLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TWSLib, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>S:\Lib\TWSLib.dll\1.0.0.2\1.0.0.2\TWSLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandLineParameters.cs" />
+    <Compile Include="Listener.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HugoReportWriterLib\HugoReportWriterLib.csproj">
+      <Project>{fee61062-f46f-4427-a7cb-7231728af452}</Project>
+      <Name>HugoReportWriterLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReportListenerLib\ReportListenerLib.csproj">
+      <Project>{98f0ebf8-4881-4b1f-93b5-7d74379907d2}</Project>
+      <Name>ReportListenerLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
